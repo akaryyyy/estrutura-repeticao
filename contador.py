@@ -1,26 +1,27 @@
-'''
-
-O que é uma estrutura de repetição?
-
-Serve para executar um bloco de código várias vezes 
-Enquanto uma condição é verdadeira
+print("Bem vindo a calculadora de tabuada, sinta-se a vontade para fazer qualquer tabuada")
 
 
-'''
+while True:
+    numero = int(input("Digite o número da tabuada: "))
 
-'''     
+    if numero < 0:
+        print("Não é permitido números negativos")
+        continue
 
-Lógica tabuada
+    limite = int(input("Digite até qual número a tabuada deve ir: "))
 
-5*1=5
-5*2=10
-5*3=15
+    if limite < 0:
+        print("Não é permitido número negativo")
+        continue
+    
+    contador = 0
 
-'''
+    while contador <= limite:
+        print(f"{numero}x{contador}={numero * contador}")
+        contador += 1
 
-tabuada = 5
-contador = 0 
+    opcao = input("Deseja gerar outra tabuada? (S/N): ") .upper()
 
-while contador <= 10:
-    print(tabuada, "x", contador, "=", contador * tabuada)
-    contador += 1
+    if opcao != "S":
+        print("Programa encerrado.")
+        break
