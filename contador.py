@@ -22,6 +22,6 @@ while True:
 
     opcao = input("Deseja gerar outra tabuada? (S/N): ") .upper()
 
-    if opcao != "S":
+    if opcao != "s":
         print("Programa encerrado.")
         break
